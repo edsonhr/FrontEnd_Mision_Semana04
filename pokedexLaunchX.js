@@ -62,13 +62,22 @@ const pokeEstadisticasPokemon = (pokeEstadisticas) => {
         {
             var content = document.createTextNode("Esfuerzo: " + pokeEstadisticas[i].effort);       
             new_div.appendChild(content);                                     
-            document.getElementById("estadisticas").appendChild(new_div+espacio);
+            document.getElementById("estadisticas").appendChild(new_div);
             
             var content = document.createTextNode("Nombre: " + pokeEstadisticas[i].stat.name);       
             new_div.appendChild(content);                                         
             document.getElementById("estadisticas").appendChild(new_div);
 
+            document.getElementById("estadisticas").appendChild(espacio);
+
             console.log("Esfuerzo: " + pokeEstadisticas[i].effort);
             console.log("Nombre: " + pokeEstadisticas[i].stat.name);
         }
 }
+
+/*
+
+LIGA PARA VER LO DEL BR
+
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_br_create
+*/
