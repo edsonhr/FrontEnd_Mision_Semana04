@@ -1,21 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex Launcher</title>
-    
-<body>
-    <h1>Bienvenido al Pokedex</h1>
-    <input type="text" placeholder="Ingresa el pokemón que deseas buscar" id="pokeName" name="pokeName"><br>
-    <h1 id="pokeNombre">Nombre</h1>
-    <img src="./pokeball.png" alt="Pokemon" width="150px" id="pokeImg"><br>
-    <h1 id="pokeTipo">Tipo</h1>
-    <h1 id="pokeEstadisticas">Estadisticas</h1>
-    <div id="estadisticas"></div>
-    <button onclick="fetchPokemon()">Buscar Pokemon</button>
-    
+<title>Pokedex</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<table id="Tabla_01" width="1016" height="737" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="6">
+			<img src="images/pokedex_01.gif" width="1015" height="233" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="1" height="233" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="9">
+			<img src="images/pokedex_02.gif" width="95" height="504" alt=""></td>
+		<td align="center" bgcolor="#F1F3D3" colspan="2" rowspan="3" width="314" height="192">
+            <img src="./pokeball.png" alt="Pokemon" width="150px" id="pokeImg"><br>
+            <font color="#000" ><strong><span id="pokeNombre"></span></strong></font>
+			</td>
+		<td rowspan="9">
+			<img src="images/pokedex_04.gif" width="209" height="504" alt=""></td>
+		<td bgcolor="#002823" width="312" height="126">
+            <font color="#fff"><strong>Estadísticas</strong>
+            <div id="estadisticas"></div>
+            </font>
+		</td>
+		<td rowspan="9">
+			<img src="images/pokedex_06.gif" width="85" height="504" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="1" height="126" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/pokedex_07.gif" width="312" height="20" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="1" height="20" alt=""></td>
+	</tr>
+	<tr>
+		<td bgcolor="#002823" rowspan="2" width="312" height="136">
+            <font color="#fff"><strong>Movimientos</strong>
+            <div id="movimientos"></div>
+            </font>
+		</td>
+		<td>
+			<img src="images/espacio.gif" width="1" height="46" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="4">
+			<img src="images/pokedex_09.gif" width="314" height="161" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="1" height="90" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/pokedex_10.gif" width="312" height="15" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="1" height="15" alt=""></td>
+	</tr>
+	<tr>
+		<td bgcolor="#002823" width="312" height="21">
+            <font color="#fff">
+                <strong>Tipo </strong> <span id="pokeTipo"></span>
+            </font>
+		</td>
+		<td>
+			<img src="images/espacio.gif" width="1" height="21" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="3">
+			<img src="images/pokedex_12.png" width="312" height="186" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="1" height="35" alt=""></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DD0632" width="228" height="114">
+            <input type="text" placeholder="Ingresa pokemon" id="pokeName" name="pokeName">
+            <button onclick="fetchPokemon()">Buscar Pokemon</button>
+		</td>
+		<td>
+			<img src="images/pokedex_14.gif" width="86" height="114" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="1" height="114" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="images/pokedex_15.gif" width="314" height="37" alt=""></td>
+		<td>
+			<img src="images/espacio.gif" width="1" height="37" alt=""></td>
+	</tr>
+</table>
 </body>
 <footer>
     <script src="./pokedexLaunchX.js"></script>

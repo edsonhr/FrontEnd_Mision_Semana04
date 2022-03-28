@@ -9,7 +9,8 @@ const fetchPokemon = () => {
     fetch(url).then((res) => {
         if (res.status != "200")
         {
-            pokeImage("./pikachusad.png");
+            pokeImage("./pikachusad.gif");
+            document.getElementById("pokeNombre").innerHTML= "Todavía no lo crean";
         }
         else
         {
@@ -24,15 +25,11 @@ const fetchPokemon = () => {
         let pokeEstadisticas = data.stats;
         let pokeMovimientos = data.moves;
 
-        console.log(pokeNombre);
-        console.log(pokeImg);
-        console.log(pokeTipo);
-        //console.log(pokeEstadisticas);
-        //console.log(pokeMovimientos);
         pokeNombrePokemon(pokeNombre);
         pokeImage(pokeImg);
         pokeTipoPokemon(pokeTipo);
         pokeEstadisticasPokemon(pokeEstadisticas);
+        pokeMovimientosPokemon(pokeMovimientos);
     })
 }
 
@@ -49,7 +46,7 @@ const pokeImage = (url) => {
 
 //Funcion para obtener el tipo de pokemon
 const pokeTipoPokemon = (pokeTipo) => {
-    document.getElementById("pokeTipo").innerHTML="Tipo: " + pokeTipo;
+    document.getElementById("pokeTipo").innerHTML=pokeTipo;
 }
 
 //Funcion para obtener estadisticas del pokemon
@@ -69,15 +66,18 @@ const pokeEstadisticasPokemon = (pokeEstadisticas) => {
             document.getElementById("estadisticas").appendChild(new_div);
 
             document.getElementById("estadisticas").appendChild(espacio);
-
-            console.log("Esfuerzo: " + pokeEstadisticas[i].effort);
-            console.log("Nombre: " + pokeEstadisticas[i].stat.name);
         }
 }
 
-/*
+//Funcion para obtener movimientos del pokemon
+const pokeMovimientosPokemon = (pokeMovimientos) => {
+    var new_div = document.createElement("div");
 
-LIGA PARA VER LO DEL BR
-
-https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_br_create
-*/
+    let tam = Object.keys(pokeMovimientos).length; //Obtengo el tamaño del objeto
+        for (var i=0; i < 10; i++)
+        {
+            var content = document.createTextNode(pokeMovimientos[i].move.name);      
+            new_div.appendChild(content);                                     
+            document.getElementById("movimientos").appendChild(new_div);
+        }
+}
